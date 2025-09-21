@@ -1,48 +1,40 @@
-import { Listing } from "@/interfaces";
+// constants/index.ts
 
-/**
- * API & App Config
- */
-export const API_URL = "https://api.example.com";
-export const APP_NAME = "ALX Listing App";
+// Hero background image for homepage
+export const HERO_BG = "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1950&q=80";
 
-/**
- * UI Text Constants
- */
-export const UI_TEXT = {
-  bookNow: "Book Now",
-  viewDetails: "View Details",
-  loading: "Loading...",
-  noListings: "No listings available at the moment.",
-};
+// Sample property listings for homepage
+import { PropertyProps } from "@/interfaces";
 
-/**
- * Mock Data: Example property listings
- * (Useful for development before connecting to a real API)
- */
-export const MOCK_LISTINGS: Listing[] = [
+export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
   {
-    id: 1,
-    title: "Cozy Apartment in Nairobi",
-    description: "A modern 2-bedroom apartment close to the city center.",
-    imageUrl: "/assets/placeholder1.jpg",
-    price: "$50/night",
-    location: "Nairobi, Kenya",
+    name: "Villa Ocean Breeze",
+    address: { state: "Seminyak", city: "Bali", country: "Indonesia" },
+    rating: 4.89,
+    category: ["Luxury Villa", "Pool", "Free Parking"],
+    price: 3200,
+    offers: { bed: "3", shower: "3", occupants: "4-6" },
+    image: "https://example.com/image1.jpg",
+    discount: ""
   },
   {
-    id: 2,
-    title: "Beachfront Villa",
-    description: "Spacious villa with ocean views and private pool.",
-    imageUrl: "/assets/placeholder2.jpg",
-    price: "$200/night",
-    location: "Diani Beach, Kenya",
+    name: "Mountain Escape Chalet",
+    address: { state: "Aspen", city: "Colorado", country: "USA" },
+    rating: 4.7,
+    category: ["Mountain View", "Fireplace", "Self Checkin"],
+    price: 1800,
+    offers: { bed: "4", shower: "2", occupants: "5-7" },
+    image: "https://example.com/image2.jpg",
+    discount: "30"
   },
   {
-    id: 3,
-    title: "Rustic Cabin Retreat",
-    description: "Escape to nature in this cozy mountain cabin.",
-    imageUrl: "/assets/placeholder3.jpg",
-    price: "$80/night",
-    location: "Mt. Kenya, Kenya",
-  },
+    name: "Cozy Desert Retreat",
+    address: { state: "Palm Springs", city: "California", country: "USA" },
+    rating: 4.92,
+    category: ["Desert View", "Pet Friendly", "Self Checkin"],
+    price: 1500,
+    offers: { bed: "2", shower: "1", occupants: "2-3" },
+    image: "https://example.com/image3.jpg",
+    discount: ""
+  }
 ];
